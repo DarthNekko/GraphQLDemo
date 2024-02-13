@@ -1,0 +1,67 @@
+{
+  books {
+    bookId
+    name
+    genre
+    pages
+    author {
+      authorId
+      authName
+    }
+    }
+  }
+
+
+
+//VARIABLES
+query GetMyBooks($bookName: String)
+{
+  books (nameContains: $bookName ) {
+    bookId
+    name
+    genre
+    pages
+    author {
+      authorId
+      authName
+    }
+    }
+  }
+
+//Aliases
+query GetMyBooks
+{
+  booksWithH : books (nameContains: "H" ) {
+    bookId
+    name
+    genre
+    }
+  booksWithM : books (nameContains: "M" ) {
+    bookId
+    name
+    genre
+  }
+  }
+
+//fragments
+
+query GetMyBooks
+{
+  booksWithH : books (nameContains: "H" ) {
+    ... bookFields
+    pages
+    }
+  booksWithM : books (nameContains: "M" ) {
+    ... bookFields
+    author {
+      authName
+    }
+  }
+  }
+
+  fragment bookFields on Book {
+    bookId
+    name
+    genre
+  }
+
