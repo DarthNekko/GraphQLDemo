@@ -1,0 +1,47 @@
+[
+  {
+    "bookId": 17,
+    "name": "Harry Potter",
+    "pages": 267,
+    "genre": "Fantasy",
+    "author": {
+      "authorId": 109,
+      "authname": "J.K. Rowling"
+    }
+  },
+  {
+    "bookId": 54,
+    "name": "Memory Man",
+    "pages": 560,
+    "author": {
+      "authname": "idk name",
+      "authorId": 334
+    },
+    "reviews": [
+      {
+        "reviewId": 67,
+        "rating": 5,
+        "description": "a real page turner",
+        "user": "Nana"
+      }
+    ]
+  },
+  {
+    "bookId": 66,
+    "name": "Exhalation",
+    "author": {
+      "authname": "name name",
+      "authorId": 3394
+    },
+    "pages": 368
+  },
+  {
+    "bookId": 91,
+    "name": "It ends with us",
+    "pages": 288,
+    "author": {
+      "authname": "authors name",
+      "authorId": 495
+    }
+  }
+]
